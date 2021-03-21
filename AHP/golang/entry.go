@@ -110,8 +110,7 @@ func (t *Ahp) processAvg() {
 		for _, val2 := range val {
 			for _, val3 := range val2 {
 				info.count++
-				info.value += (val3)
-				info.value = (info.value)
+				info.value += val3
 				info.nums = append(info.nums, strconv.FormatFloat(val3, 'f', 3, 64))
 				hash[key] = info
 			}

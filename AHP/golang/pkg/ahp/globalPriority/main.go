@@ -7,7 +7,7 @@ import (
 	"github.com/afwani-git/sistem-pendukung-keputusan/AHP/golang/pkg/ahp"
 )
 
-func globalPriority(c *ahp.Ahp, a *[]Alternative) GpInfo {
+func GlobalPriority(c *ahp.Ahp, a *[]Alternative) GpInfo {
 
 	gpI := &GpInfo{}
 	table := &map[string]ahp.Col{}

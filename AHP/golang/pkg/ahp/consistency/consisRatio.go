@@ -8,8 +8,7 @@ import (
 
 // info
 // Ordo matriks 	1 	2 	3 		4 		5 		6 		7 		8 		9 		10
-//Ratio index 		0 	0 	0.58 	0.9 	1.12 	1.24 	1.32 	1.41 	1.46 	1.49
-
+// Ratio index 		0 	0 	0.58 	0.9 	1.12 	1.24 	1.32 	1.41 	1.46 	1.49
 type Ri float64
 type Ordo int
 

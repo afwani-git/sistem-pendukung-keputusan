@@ -11,7 +11,6 @@ func ProcessLamdaMaks(a *ahp.Ahp) ahp.LamdaMaks {
 
 	//make hash/key-val table
 	hash := make(map[string]ahp.LambdaInfo, len(a.Sum))
-	// key := make([]string, len(a.Sum))
 
 	for key, val := range a.Sum {
 

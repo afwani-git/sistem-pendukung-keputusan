@@ -22,8 +22,6 @@ func GlobalPriority(c *ahp.Ahp, a *[]Alternative) GpInfo {
 
 	gpI.Table = *table
 
-	//helper
-
 	process := calculateValues(c, gpI)
 
 	gpI.Process = process
@@ -51,6 +49,5 @@ func GlobalPriority(c *ahp.Ahp, a *[]Alternative) GpInfo {
 	}
 
 	gpI.Ranking = ranking
-	// fmt.Println(gpI)
 	return *gpI
 }

@@ -7,7 +7,7 @@ import (
 )
 
 // Gap= 𝑀𝑖𝑛𝑖𝑚𝑎𝑙𝑃𝑟𝑜𝑓𝑖𝑙𝑒−𝑇𝑒𝑠𝑡𝑑𝑎𝑡𝑎𝑝𝑟𝑜𝑓𝑖𝑙𝑒
-func MappingGap(g gap.Gap) TableGapMapping {
+func MappingGap(g gap.SpecTable) TableGapMapping {
 
 	tableGapMapping := make(TableGapMapping)
 	tableAspec := g.AspectTable

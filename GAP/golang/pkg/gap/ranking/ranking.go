@@ -8,7 +8,7 @@ import (
 	"github.com/afwani-git/sistem-pendukung-keputusan/GAP/golang/pkg/gap/calculate"
 )
 
-func Ranking(t calculate.TableTotalCalcFactory, g gap.Gap) RankingTable {
+func Ranking(t calculate.TableTotalCalcFactory, g gap.SpecTable) RankingTable {
 
 	type calCulateAspec map[gap.Aspec]map[gap.CadidateName]struct {
 		Value float64

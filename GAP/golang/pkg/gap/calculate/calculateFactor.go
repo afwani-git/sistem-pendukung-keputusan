@@ -8,7 +8,7 @@ import (
 	"github.com/afwani-git/sistem-pendukung-keputusan/GAP/golang/pkg/gap/gapMapping"
 )
 
-func CalculateFactor(m gapMapping.TableGapMapping, g gap.Gap) TableTotalCalcFactory {
+func CalculateFactor(m gapMapping.TableGapMapping, g gap.SpecTable) TableTotalCalcFactory {
 
 	table := make(TableTotalCalcFactory)
 	// aspecTable := g.AspectTable

@@ -43,7 +43,7 @@ type InfoWeig struct {
 
 type WeigTable map[string]InfoWeig
 
-type Gap struct {
+type SpecTable struct {
 	AspectTable   AspectTable    `json:"aspectTable"`
 	CadidateTable CandidateTable `json:"candidateTable"`
 	Wtable        WeigTable      `json:"weightTable"`

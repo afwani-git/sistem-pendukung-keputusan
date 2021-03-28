@@ -40,6 +40,10 @@ type Ahp struct {
 	Cr    CrInfo          `json:"cr"`
 }
 
-func (w *Wow) Tes() {
+type CandidateName string
+type AspecName string
+type AspecValue string
 
-}
+type CandidateTable map[CandidateName]map[AspecName]AspecValue
+
+// type CandidateTable map[string]map[]

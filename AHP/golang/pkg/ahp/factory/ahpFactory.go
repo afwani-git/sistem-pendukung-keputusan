@@ -15,6 +15,7 @@ type AlternativeTable struct {
 type AhpFactory struct {
 	TableCriteria    *ahp.Row
 	TableAlternative *[]AlternativeTable
+	TableCandidate   ahp.CandidateTable
 }
 
 func (a *AhpFactory) CreateCeriteria() ahp.Ahp {
@@ -69,7 +70,7 @@ func (a *AhpFactory) Create() globalPriority.GpInfo {
 	ceriteria := a.CreateCeriteria()
 	alternative := a.CreateAlternatives()
 
-	g := globalPriority.GlobalPriority(&ceriteria, &alternative)
+	g := globalPriority.GlobalPriority(&ceriteria, &alternative, a.TableCandidate)
 
 	return g
 }

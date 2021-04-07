@@ -11,55 +11,55 @@ func main() {
 	//ceriteria table
 	ceTable := ahp.NewTable()
 
-	(*ceTable)["PERFORMA"] = []ahp.Col{{"PERFORMA": 1.0}, {"PENDIDIKAN": 3.0}, {"KOMUNIKASI": 5.0}}
-	(*ceTable)["PENDIDIKAN"] = []ahp.Col{{"PERFORMA": 1.0 / 3.0}, {"PENDIDIKAN": 1.0}, {"KOMUNIKASI": 3.0}}
-	(*ceTable)["KOMUNIKASI"] = []ahp.Col{{"PERFORMA": 1.0 / 5.0}, {"PENDIDIKAN": 1.0 / 3.0}, {"KOMUNIKASI": 1.0}}
+	(*ceTable)["ABSENSI"] = []ahp.Col{{"ABSENSI": 1.0}, {"IPK": 2.0}, {"PRILAKU": 4.0}}
+	(*ceTable)["IPK"] = []ahp.Col{{"ABSENSI": 1.0 / 2.0}, {"IPK": 1.0}, {"PRILAKU": 4.0}}
+	(*ceTable)["PRILAKU"] = []ahp.Col{{"ABSENSI": 1.0 / 4.0}, {"IPK": 1.0 / 4.0}, {"PRILAKU": 1.0}}
 
 	////////////////////////
-	//alternative pendidikan
+	//alternative IPK
 	////////////////////////
-	//pendidikan alternative table
-	pdTable := ahp.NewTable() //pendidikanTable
+	//IPK alternative table
+	pdTable := ahp.NewTable() //IPKTable
 
-	(*pdTable)["A"] = []ahp.Col{{"A": 1.0}, {"B": 2.0}, {"C": 2.0}}
-	(*pdTable)["B"] = []ahp.Col{{"A": 1.0 / 2.0}, {"B": 1}, {"C": 2.0}}
-	(*pdTable)["C"] = []ahp.Col{{"A": 1.0 / 2.0}, {"B": 1 / 2.0}, {"C": 1.0}}
+	(*pdTable)["A"] = []ahp.Col{{"A": 1.0}, {"B": 3.0}, {"C": 4.0}}
+	(*pdTable)["B"] = []ahp.Col{{"A": 1.0 / 3.0}, {"B": 1}, {"C": 3.0}}
+	(*pdTable)["C"] = []ahp.Col{{"A": 1.0 / 4.0}, {"B": 1 / 3.0}, {"C": 1.0}}
 
 	pdAlternative := factory.AlternativeTable{
-		Key:   "PENDIDIKAN",
-		Desc:  "alternative pendidikan",
+		Key:   "IPK",
+		Desc:  "alternative IPK",
 		Table: *pdTable,
 	}
 
 	//////////////////////
-	//alternative performa
+	//alternative ABSENSI
 	//////////////////////
-	//performa alternative table
+	//ABSENSI alternative table
 	peTable := ahp.NewTable()
 
-	(*peTable)["A"] = []ahp.Col{{"A": 1.0}, {"B": 3.0}, {"C": 4.0}}
-	(*peTable)["B"] = []ahp.Col{{"A": 1.0 / 3.0}, {"B": 1}, {"C": 2.0}}
-	(*peTable)["C"] = []ahp.Col{{"A": 1.0 / 4.0}, {"B": 1 / 2.0}, {"C": 1.0}}
+	(*peTable)["A"] = []ahp.Col{{"A": 1.0}, {"B": 5.0}, {"C": 7.0}}
+	(*peTable)["B"] = []ahp.Col{{"A": 1.0 / 5.0}, {"B": 1}, {"C": 3.0}}
+	(*peTable)["C"] = []ahp.Col{{"A": 1.0 / 7.0}, {"B": 1 / 3.0}, {"C": 1.0}}
 
 	peAlternative := factory.AlternativeTable{
-		Key:   "PERFORMA",
-		Desc:  "alternative performa",
+		Key:   "ABSENSI",
+		Desc:  "alternative ABSENSI",
 		Table: *peTable,
 	}
 
 	//////////////////////
-	//alternative Komunikasi
+	//alternative PRILAKU
 	//////////////////////
 	//motivasi alternative table
 	maTable := ahp.NewTable()
 
-	(*maTable)["A"] = []ahp.Col{{"A": 1.0}, {"B": 3.0}, {"C": 4.0}}
-	(*maTable)["B"] = []ahp.Col{{"A": 1.0 / 3.0}, {"B": 1}, {"C": 2.0}}
-	(*maTable)["C"] = []ahp.Col{{"A": 1.0 / 4.0}, {"B": 1 / 2.0}, {"C": 1.0}}
+	(*maTable)["A"] = []ahp.Col{{"A": 1.0}, {"B": 2.0}, {"C": 2.0}}
+	(*maTable)["B"] = []ahp.Col{{"A": 1.0 / 2.0}, {"B": 1}, {"C": 2.0}}
+	(*maTable)["C"] = []ahp.Col{{"A": 1.0 / 2.0}, {"B": 1 / 2.0}, {"C": 1.0}}
 
 	maAlternative := factory.AlternativeTable{
-		Key:   "KOMUNIKASI",
-		Desc:  "alternative Komunikasi",
+		Key:   "PRILAKU",
+		Desc:  "alternative PRILAKU",
 		Table: *maTable,
 	}
 
@@ -71,21 +71,21 @@ func main() {
 	cTable := make(ahp.CandidateTable)
 	//afwani
 	cTable["Afwani"] = make(map[ahp.AspecName]ahp.AspecValue)
-	cTable["Afwani"]["PENDIDIKAN"] = "A"
-	cTable["Afwani"]["PERFORMA"] = "A"
-	cTable["Afwani"]["KOMUNIKASI"] = "A"
+	cTable["Afwani"]["IPK"] = "A"
+	cTable["Afwani"]["ABSENSI"] = "A"
+	cTable["Afwani"]["PRILAKU"] = "A"
 
 	//dana
 	cTable["Dana"] = make(map[ahp.AspecName]ahp.AspecValue)
-	cTable["Dana"]["PENDIDIKAN"] = "B"
-	cTable["Dana"]["PERFORMA"] = "B"
-	cTable["Dana"]["KOMUNIKASI"] = "B"
+	cTable["Dana"]["IPK"] = "B"
+	cTable["Dana"]["ABSENSI"] = "B"
+	cTable["Dana"]["PRILAKU"] = "B"
 
 	//jhon
 	cTable["Jhon"] = make(map[ahp.AspecName]ahp.AspecValue)
-	cTable["Jhon"]["PENDIDIKAN"] = "C"
-	cTable["Jhon"]["PERFORMA"] = "A"
-	cTable["Jhon"]["KOMUNIKASI"] = "A"
+	cTable["Jhon"]["IPK"] = "C"
+	cTable["Jhon"]["ABSENSI"] = "A"
+	cTable["Jhon"]["PRILAKU"] = "A"
 
 	//factory
 	AhpFactory := factory.AhpFactory{
